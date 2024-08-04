@@ -1,4 +1,4 @@
-// Card class
+// Card class Defines a card with a value and suit.
 class Card {
     constructor(value, suit) {
       this.value = value;
@@ -6,7 +6,7 @@ class Card {
     }
   }
   
-  // Deck class
+  // Deck class Creates a deck of 52 cards and allows shuffling and dealing.
   class Deck {
     constructor() {
       this.cards = [];
@@ -29,7 +29,7 @@ class Card {
     }
   }
   
-  // Player class
+  // Player class  Represents a player with a name, hand of cards, and score.
   class Player {
     constructor(name) {
       this.name = name;
@@ -47,13 +47,18 @@ class Card {
   }
   
   // Game logic
+  //Creates a deck and shuffles it.
   function game() {
     const deck = new Deck();
     deck.shuffle();
   
     const player1 = new Player('fatima');
     const player2 = new Player('mohamed');
-  
+     
+    // Deals 26 cards to each player.
+    //Iterates through turns, comparing card values and awarding points.
+    // Declares the winner based on the final score.
+    
     for (let i = 0; i < 26; i++) {
       player1.hand.push(deck.deal());
       player2.hand.push(deck.deal());
